@@ -45,7 +45,7 @@ class Portfolio extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                  'FreeLancer, Currently open to co-operation on new and existing projects.'),
+                  'Currently open to co-operation on new and existing projects.'),
             ],
           )),
     );

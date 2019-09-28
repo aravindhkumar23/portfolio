@@ -73,6 +73,28 @@ class Menu extends StatelessWidget {
                     ),
                     new ListTile(
                       title: new Text(
+                        'Skills & project highlights'.toUpperCase(),
+                        style: _optionsTextStyle(isActive: activeTab == 3),
+                      ),
+                      onTap: () {
+                        onTabChange(3);
+                      },
+                      trailing: activeTab == 3
+                          ? new Icon(
+                              Icons.chevron_right,
+                              color: Colors.white,
+                            )
+                          : null,
+                    ),
+                    new ListTile(
+                      onTap: openCV,
+                      title: new Text(
+                        'MY CV',
+                        style: _optionsTextStyle(isActive: activeTab == 4),
+                      ),
+                    ),
+                    new ListTile(
+                      title: new Text(
                         'CONTACT ME',
                         style: _optionsTextStyle(isActive: activeTab == 2),
                       ),
@@ -85,13 +107,6 @@ class Menu extends StatelessWidget {
                               color: Colors.white,
                             )
                           : null,
-                    ),
-                    new ListTile(
-                      onTap: openCV,
-                      title: new Text(
-                        'My CV',
-                        style: _optionsTextStyle(isActive: activeTab == 3),
-                      ),
                     ),
                     new ListTile(
                       title: new Text(

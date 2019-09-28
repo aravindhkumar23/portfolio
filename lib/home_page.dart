@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/contact_me.dart';
 import 'package:portfolio/portfolio.dart';
+import 'package:portfolio/skills.dart';
 import 'package:portfolio/utils.dart';
 
 import 'menu.dart';
@@ -11,7 +12,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int activeTab = 1;
+  int activeTab = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -30,12 +31,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           child: Row(
             children: <Widget>[
-              new Expanded(
-                flex: 1,
-                child: isMobile(context: context)
-                    ? new Container()
-                    : _renderMenuContent(),
-              ),
+              isMobile(context: context)
+                  ? new Container()
+                  : new Expanded(flex: 1, child: _renderMenuContent()),
               new Expanded(
                 flex: 4,
                 child: _renderView(),
@@ -49,6 +47,9 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       activeTab = activeTabIndex;
     });
+    if (Navigator.of(context).canPop()) {
+      Navigator.of(context).pop();
+    }
   }
 
   Widget _renderView() {
@@ -58,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
       case 2:
         return ContactMe();
       case 3:
-        return HomePageContent();
+        return Skills();
       default:
         return new HomePageContent();
     }
@@ -86,21 +87,7 @@ class HomePageContent extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           new Text(
-            'Hi, I\'m Aravindh,',
-            style: TextStyle(color: Colors.white, fontSize: 30.0),
-          ),
-          SizedBox(
-            height: 10.0,
-          ),
-          new Text(
-            'a freelance mobile app developer',
-            style: TextStyle(color: Colors.white, fontSize: 20.0),
-          ),
-          SizedBox(
-            height: 10.0,
-          ),
-          new Text(
-            'specialized in front-end and back-end web development',
+            'Experienced Mobile Engineer and Team Lead with a demonstrated history of working with Startups. Skilled in iOS Mobile Application Development and Flutter, React Native (Cross-Platform Mobile App) with great expertise in Agile and Product development methodologies. Strong engineering professional with a M.Sc. in Computer Science from College of Engineering, Guindy (one of the most prestigious educational institutes in India).',
             style: TextStyle(color: Colors.white, fontSize: 30.0),
           ),
         ],
