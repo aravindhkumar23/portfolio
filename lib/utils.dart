@@ -51,3 +51,24 @@ void openCV() {
     'https://drive.google.com/file/d/1D79_nea5hEJDWyfqoNqXKboXGf7XFGUZ/view?usp=sharing'
   ]);
 }
+
+void openCompanyProfile({int index}) {
+  switch (index) {
+    case 0:
+      break;
+    case 1:
+      js.context.callMethod('open', ['http://digiryte.com/']);
+      break;
+    case 2:
+      js.context.callMethod('open', ['https://www.redblacktree.com/']);
+      break;
+    case 3:
+      js.context.callMethod('open', ['https://www.redblacktree.com/']);
+      break;
+    case 4:
+      js.context.callMethod('open', ['http://aaumanalytics.com/']);
+      break;
+    default:
+      break;
+  }
+}

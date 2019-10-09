@@ -18,7 +18,7 @@ class Menu extends StatelessWidget {
         children: <Widget>[
           Container(
             decoration: BoxDecoration(
-              color: Color.fromRGBO(165, 26, 26, 0.7),
+              color: getAppColor(),
             ),
           ),
           Container(
