@@ -2,12 +2,16 @@ import 'package:flutter/material.dart';
 
 class Skills extends StatelessWidget {
   final List<String> skills = [
-    'Flutter',
-    'React Native',
-    'iOS[Swift]',
-    'FCM',
-    'Firestore',
-    'Couchbase Lite',
+    'Mobile Application Development',
+    'iOS and Android Platforms',
+    'Swift, Kotlin, Java, Flutter, React Native',
+    'Cross-Functional Leadership',
+    'Agile Methodologies',
+    'Architecture Design',
+    'Code Reviews and Quality Assurance',
+    'Team Mentoring and Coaching',
+    'Innovation and Continuous Improvement',
+    'Project Management',
   ];
 
   final TextStyle projectStyle = TextStyle(fontSize: 19.0);
@@ -15,7 +19,7 @@ class Skills extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: Colors.white.withOpacity(0.9),
       child: CustomScrollView(slivers: <Widget>[
         SliverList(
           delegate: SliverChildListDelegate(
@@ -25,94 +29,6 @@ class Skills extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    new Container(
-                      padding:const EdgeInsets.symmetric(vertical: 10.0),
-                      child: new Text(
-                        'Project Highlights',
-                        style: TextStyle(
-                            fontSize: 20.0, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          new Text(
-                            '•',
-                          ),
-                          new SizedBox(
-                            width: 10.0,
-                          ),
-                          new Expanded(
-                            child: new Text(
-                              'Internal communication platform, directory and health & wellbeing of employees (Native iOS using Swift, Couchbase Lite for Offline storage- 4 months)',
-                              style: projectStyle,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          new Text(
-                            '•',
-                          ),
-                          new SizedBox(
-                            width: 10.0,
-                          ),
-                          new Expanded(
-                            child: new Text(
-                              'Dispute resolution of students within education institution (React Native- 5 months) ',
-                              style: projectStyle,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          new Text(
-                            '•',
-                          ),
-                          new SizedBox(
-                            width: 10.0,
-                          ),
-                          new Expanded(
-                            child: new Text(
-                              'Custom made CMS for providing awareness in good oral health and dental problems (React native- 6 months) ',
-                              style: projectStyle,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          new Text(
-                            '•',
-                          ),
-                          new SizedBox(
-                            width: 10.0,
-                          ),
-                          new Expanded(
-                            child: new Text(
-                              'Inspection and inventory management using offline & online sync as a property management solutions ( Flutter- 8 months)',
-                              style: projectStyle,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
                     new Container(
                       padding: const EdgeInsets.only(top: 20.0),
                       child: new Text(
@@ -152,7 +68,107 @@ class Skills extends StatelessWidget {
               ),
             );
           }, childCount: skills.length),
-        )
+        ),
+        SliverList(
+          delegate: SliverChildListDelegate([
+            Container(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  new Container(
+                    padding:const EdgeInsets.symmetric(vertical: 10.0),
+                    child: new Text(
+                      'Project Highlights',
+                      style: TextStyle(
+                          fontSize: 20.0, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        new Text(
+                          '•',
+                        ),
+                        new SizedBox(
+                          width: 10.0,
+                        ),
+                        new Expanded(
+                          child: new Text(
+                            'Internal communication platform, directory and health & wellbeing of employees (Native iOS using Swift, Couchbase Lite for Offline storage- 4 months)',
+                            style: projectStyle,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        new Text(
+                          '•',
+                        ),
+                        new SizedBox(
+                          width: 10.0,
+                        ),
+                        new Expanded(
+                          child: new Text(
+                            'Dispute resolution of students within education institution (React Native- 5 months) ',
+                            style: projectStyle,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        new Text(
+                          '•',
+                        ),
+                        new SizedBox(
+                          width: 10.0,
+                        ),
+                        new Expanded(
+                          child: new Text(
+                            'Custom made CMS for providing awareness in good oral health and dental problems (React native- 6 months) ',
+                            style: projectStyle,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        new Text(
+                          '•',
+                        ),
+                        new SizedBox(
+                          width: 10.0,
+                        ),
+                        new Expanded(
+                          child: new Text(
+                            'Inspection and inventory management using offline & online sync as a property management solutions ( Flutter- 8 months)',
+                            style: projectStyle,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ]),
+        ),
       ]),
     );
   }

@@ -31,7 +31,7 @@ class Menu extends StatelessWidget {
                   child: new CircleAvatar(
                     backgroundColor: Colors.white,
                     radius: 50.0,
-                    backgroundImage: new AssetImage('assets/dp.jpg'),
+                    backgroundImage: new AssetImage('assets/profile_pic.jpeg'),
                   ),
                 ),
                 new SizedBox(
@@ -46,7 +46,7 @@ class Menu extends StatelessWidget {
                   height: 5.0,
                 ),
                 new Text(
-                  'Mobile Application Developer'.toUpperCase(),
+                  'Engineering lead'.toUpperCase(),
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.white, fontSize: 13),
                 ),
@@ -114,26 +114,30 @@ class Menu extends StatelessWidget {
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
-                    new Row(
+                    new Wrap(
                       children: <Widget>[
+                        Container(width: 10.0,),
                         new IconButton(
                             icon: Icon(
                               Icons.mail_outline,
                               color: Colors.white,
                             ),
                             onPressed: () {}),
+                        Container(width: 20.0,),
                         new IconButton(
                             icon: Icon(
                               FontAwesomeIcons.facebook,
                               color: Colors.white,
                             ),
                             onPressed: openFb),
+                        Container(width: 20.0,),
                         new IconButton(
                             icon: Icon(
                               FontAwesomeIcons.linkedin,
                               color: Colors.white,
                             ),
                             onPressed: openLinkedIn),
+                        Container(width: 20.0,),
                         new IconButton(
                             icon: Icon(
                               FontAwesomeIcons.github,

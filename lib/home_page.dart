@@ -24,10 +24,10 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: NetworkImage(
-                  'https://jtom.me/images/home-bg3.7a2a1df8.jpg',
-                ),
-                fit: BoxFit.cover),
+                image: AssetImage(
+                'assets/home_bg.jpg'),
+                fit: BoxFit.cover,
+            ),
           ),
           child: Row(
             children: <Widget>[
@@ -80,17 +80,19 @@ class HomePageContent extends StatelessWidget {
     return Container(
       height: double.infinity,
       width: double.infinity,
-      alignment: Alignment.topLeft,
+      alignment: Alignment.center,
       padding: const EdgeInsets.all(20.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          new Text(
-            'Experienced Mobile Engineer and Team Lead with a demonstrated history of working with Startups. Skilled in iOS Mobile Application Development and Flutter, React Native (Cross-Platform Mobile App) with great expertise in Agile and Product development methodologies. Strong engineering professional with a M.Sc. in Computer Science from College of Engineering, Guindy (one of the most prestigious educational institutes in India).',
-            style: TextStyle(color: Colors.white, fontSize: 30.0),
-          ),
-        ],
+      child: ScrollConfiguration(
+        behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+        child: ListView(
+          shrinkWrap: true,
+          children: <Widget>[
+            new Text(
+              'Experienced Mobile Engineer and Team Lead with a demonstrated history of working with Startups. Skilled in iOS Mobile Application Development and Flutter, React Native (Cross-Platform Mobile App) with great expertise in Agile and Product development methodologies. Strong engineering professional with a M.Sc. in Computer Science from College of Engineering, Guindy (one of the most prestigious educational institutes in India).',
+              style: TextStyle(color: Colors.white, fontSize: 30.0),
+            ),
+          ],
+        ),
       ),
     );
   }

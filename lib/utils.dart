@@ -55,6 +55,7 @@ void openCV() {
 void openCompanyProfile({int index}) {
   switch (index) {
     case 0:
+      js.context.callMethod('open', ['https://www.rootquotient.com/']);
       break;
     case 1:
       js.context.callMethod('open', ['http://digiryte.com/']);

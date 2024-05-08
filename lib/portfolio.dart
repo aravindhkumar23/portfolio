@@ -5,13 +5,15 @@ class Portfolio extends StatelessWidget {
   final List<dynamic> experience = [
     {
       'year': 'May\'19 to current',
-      'jobTitle': 'Mobile Application Developer',
+      'jobTitle': 'Engineering Lead',
       'companyName':
-          'Freelancer - Currently open to co-operation on new and existing projects.',
+          'Rootquotient Technologies Pvt Ltd',
       'content': [
-        'Creating hybrid mobile applications for Android and iOS using Flutter by bringing in the best of native features, native UI and robustness of hybrid framework',
-        'Writing Native Mobile Device Plugins for Flutter framework using Java for Android platforms and Swift for iOS platforms',
-        'Worked with team to create prototypes of new designs and training materials'
+        'Technical Leadership: Led a team of mobile developers in the successful delivery of multiple mobile applications for iOS and Android platforms, ensuring adherence to coding standards, performance optimization, and timely delivery of projects.',
+        'Architecture Design: Designed and implemented scalable and maintainable architectures for mobile applications, optimizing performance, and enhancing user experience.',
+        'Team Collaboration: Collaborated closely with product management, design, and QA teams to define project requirements, prioritize tasks, and ensure alignment on project goals and timelines.',
+        'Mentorship and Coaching: Provided mentorship and coaching to team members, fostering their professional growth and development through knowledge sharing, code reviews, and technical guidance.',
+        'Innovation and Continuous Improvement: Stayed abreast of emerging technologies and industry trends in mobile development, driving innovation initiatives within the team and exploring new tools and frameworks to improve development efficiency and product quality.'
       ],
     },
     {
@@ -58,7 +60,7 @@ class Portfolio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: Colors.white.withOpacity(0.9),
       child: new ListView(
         padding: const EdgeInsets.all(15.0),
         children: <Widget>[
